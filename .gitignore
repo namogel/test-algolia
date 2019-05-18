@@ -1,0 +1,5 @@
+*.dat
+*.tsv
+*.gz
+tests
+__pycache__
