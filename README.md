@@ -19,6 +19,7 @@ The metadata consists of the number of distinct queries along with the most freq
 
 ## Notes
 
+* The log file must be sorted before running parsing.py. It can be sorted with the linux command `sort` if the file is not too big, else we should implement a sorting algorithm.
 * Parsing efficiency could be improved by parsing split chunks of the same file simultaneously by multiple threads and sharing the results with each others.
-* With the current implementation, there can be memory issues if the log file is too big as we store in the RAM all the distinct queries of the sub time units.
+* There can be memory issues if the log file is too big as we store in the RAM all the distinct queries of the sub time units.
 * It would be possible to improve the RAM use by storing only the lowest time unit metas and reading the above time unit metas from the filesystem, which would result in higher io.
